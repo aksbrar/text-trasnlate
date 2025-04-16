@@ -12,10 +12,15 @@ body{
   justify-content: center;
 }
 
+h1{
+  margin: 0 0 .5em 0;
+}
+
 .container{
   background-color: white;
   padding: 1em 2em;
   border: 2px dotted black;
+  box-shadow: 3px 3px 2px black;
 }
 
 label, select, textarea{
@@ -41,5 +46,18 @@ button{
   font-weight: 700;
   background-color: black;
   color: white;
-  border: 2px dotted white;
+  border: 1px dotted white;
+  cursor: pointer;
+}
+button:hover{
+  animation: large 1s 1 forwards;
+}
+
+@keyframes large {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
