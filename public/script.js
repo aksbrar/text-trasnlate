@@ -20,6 +20,8 @@ loadVoices()
 // speak the text
 bt.addEventListener('click', () => {
   let utternace = new SpeechSynthesisUtterance(textInput.value)
+  let selectedVoice = voices[voice.value]
+  if (selectedVoice) utternace.voice = selectedVoice
   speechSynthesis.speak(utternace)
 })
 
